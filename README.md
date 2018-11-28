@@ -42,6 +42,15 @@ AUTHOR_NAME        ::= first_name, last_name
 
 Do not assume unicode is supported, so use LaTeX macros instead of special characters directly. [Here is a usefule cheatsheet for accents](https://en.wikibooks.org/wiki/LaTeX/Special_Characters#Escaped_codes).
 
+# Testing
+
+A test TeX file is present in directory (test)[test/]. You can compile it by running
+```sh
+cd test
+make
+```
+The output pdf should display the whole bibliography. 
+
 # References
 
 * [BibTeX guide, including a table of mandatory fields](https://en.wikibooks.org/wiki/LaTeX/Bibliography_Management#BibTeX)
