@@ -1,9 +1,5 @@
 TEX      = xelatex
 TEXFLAGS = -interaction=nonstopmode
-BIB      = bibtex
-BIBFLAGS = 
-
-all: test.pdf
 
 clean:
 	-rm *.aux
@@ -11,10 +7,10 @@ clean:
 	-rm *.blg
 	-rm *.log
 	-rm *.out
-	-rm *.pdf
 
-%.pdf: %.tex
-	$(TEX) $(TEXFLAGS) $<
-	$(BIB) $(BIBGLAGS) $(shell basename $< .tex)
-	$(TEX) $(TEXFLAGS) $<
-	$(TEX) $(TEXFLAGS) $<
+%:
+	cd $<
+	echo $<
+	pwd
+	$(TEX) $(TEXFLAGS) $<.tex
+	$(TEX) $(TEXFLAGS) $<.tex
